@@ -252,8 +252,16 @@ article {
 @media only screen and (min-width: 1200px) {
   article {
     width: 1127px;
-    margin-top: calc((100% - 1127px) / 2);
-    margin-bottom: calc((100% - 1127px) / 2);
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  article {
+    width: 1440px;
+    margin-top: 3%;
+    margin-bottom: 3%;
   }
 }
 
@@ -538,7 +546,7 @@ article {
 /* Language */
 .language {
   font-weight: 600;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 
 /* Labels */
@@ -576,7 +584,7 @@ article {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin-top: 0;
+  margin-top: 5px;
   margin-bottom: 0;
   white-space: nowrap;
   font-size: 0.9em;
@@ -593,29 +601,17 @@ article {
   color: black;
   transition: color 0.2s ease-in-out;
 }
-.contacts li a.facebook:hover {
-  color: #3b5998;
-}
 .contacts li a.github:hover {
   color: dimgrey;
 }
 .contacts li a.mail:hover {
   color: dimgrey;
 }
-.contacts li a.skype:hover {
-  color: #00aff0;
-}
 .contacts li a.linkedin:hover {
   color: #0077b5;
 }
 .contacts li a.telegram:hover {
   color: #0088cc;
-}
-.contacts li a.phone:hover {
-  color: dimgrey;
-}
-.contacts li a.website {
-  display: none;
 }
 .contacts li a .icon {
   fill: currentColor;
@@ -694,6 +690,7 @@ details > div:after {
   transform: rotate(90deg);
 }
 .details > label.summary {
+  font-style: italic;
   cursor: pointer;
 }
 .details > input:checked ~ div {
@@ -739,7 +736,7 @@ li.details > input {
 /* Highlighted list item */
 li.highlighted {
   padding: 0.5em;
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(0, 128, 0, 0.15);
   border-radius: 4px;
 }
 
@@ -839,11 +836,11 @@ li.bordered > ul > details > div {
   vertical-align: top;
   position: relative;
 }
-.color.midnightblue:before {
-  background-color: midnightblue;
+.color.green:before {
+  background-color: green;
 }
-.color.chartreuse:before {
-  background-color: chartreuse;
+.color.pink:before {
+  background-color: pink;
 }
 
 /* Audio button */
@@ -859,42 +856,6 @@ button.audio svg {
   height: 16px;
   width: 16px;
   vertical-align: text-top;
-}
-
-/* Resume */
-#resume {
-  color: inherit;
-  transition: 0.2s;
-  opacity: 0.75;
-  padding: 0 0.25em 0.25em 0.25em;
-  margin-left: -0.25em;
-  display: inline-block;
-}
-#resume:hover {
-  opacity: 1;
-}
-#resume .dots {
-  background: #808080;
-  color: white;
-  padding: 0 0.2em;
-  border-radius: 3px;
-  height: 1em;
-  line-height: 1em;
-  margin-top: 0.2857142857em;
-  float: left;
-  margin-right: 0.2857142857em;
-}
-#resume .dots .dot {
-  float: left;
-  height: 0.42857142857em;
-  width: 0.42857142857em;
-  background: white;
-  border-radius: 100%;
-  margin-top: 0.2857142857em;
-  vertical-align: top;
-}
-#resume .dots .dot:not(:last-child) {
-  margin-right: 0.2142857em;
 }
 
 /* Dialog */
@@ -1000,9 +961,6 @@ main {
   background: white;
   position: relative;
 }
-main:nth-last-child(3) {
-  margin-bottom: 50vh;
-}
 footer {
   height: 50vh;
   position: fixed;
@@ -1043,4 +1001,69 @@ footer {
   main:nth-last-child(3) {
     margin-bottom: 0;
   }
+}
+@media only screen and (max-width: 767px) {
+  .wave {
+    width: 5%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .wave {
+    width: 4%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .wave {
+    width:3%;
+  }
+}
+
+.extra { 
+  display: none;
+}
+
+.russian:hover .extra {
+  display: inline-block;
+  font-style: italic;
+  font-size: 0.7em;
+}
+
+/* Tags */
+[data-tag]>*:first-child:after {
+  font-size: 0.6em;
+  line-height: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0em 0.75em;
+  border-radius: 15px;
+  height: 1rem;
+  margin-left: 0.5em;
+  margin-top: -1px;
+  vertical-align: middle;
+  box-shadow: inset 0 0 0 1px;
+  opacity: 0.5;
+  transition: opacity 0.2s linear;
+}
+
+[data-tag]:hover>*:first-child:after {
+  color: #ffffff;
+  opacity: 1;
+  box-shadow: none;
+}
+
+[data-tag="work"]>*:first-child:after {
+  content: "work";
+}
+
+[data-tag="self-education"]>*:first-child:after {
+  content: "self-education";
+}
+
+[data-tag="work"]:hover>*:first-child:after {
+  background: blue;
+}
+
+[data-tag="self-education"]:hover>*:first-child:after {
+  background: rgb(15, 211, 48);
 }

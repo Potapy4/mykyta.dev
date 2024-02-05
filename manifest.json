@@ -1,16 +1,16 @@
 {
-  "short_name": "VK",
-  "name": "Volodymyr Kushnir",
+  "short_name": "MP",
+  "name": "Mykyta Potapenko",
   "icons": [
     {
-      "src": "/assets/images/favicon-192x192.png",
+      "src": "/assets/images/favicon-32x32.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "32x32"
     },
     {
-      "src": "/assets/images/favicon-512x512.png",
+      "src": "/assets/images/favicon-96x96.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "96x96"
     }
   ],
   "start_url": "/index.html",
