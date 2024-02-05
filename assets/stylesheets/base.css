@@ -10,7 +10,7 @@
   box-sizing: inherit;
 }
 html {
-  font-size: 14px;
+  font-size: 16px;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   box-sizing: border-box;
@@ -109,6 +109,7 @@ ol {
 }
 li {
   list-style: none outside none;
+  padding-top: 0.2em;
 }
 ul > li:before {
   content: "●";
@@ -766,16 +767,16 @@ li.bordered > ul > details > div {
   margin: 0;
 }
 .timeline:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 1.2em;
 }
 .timeline > li:before {
   display: none;
 }
 .timeline > li:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 .timeline > li p {
-  margin: 0;
+  margin-bottom: 0.2em;
 }
 
 /* Tags */
