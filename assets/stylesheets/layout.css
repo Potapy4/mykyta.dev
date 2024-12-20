@@ -1,0 +1,78 @@
+@import 'variables.css';
+
+/* Base Layout */
+html {
+    font-size: var(--font-size-base);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-base);
+    line-height: var(--line-height-base);
+    background-color: var(--color-background);
+    color: var(--color-primary);
+}
+
+/* Selection */
+::-moz-selection {
+    background: var(--color-selection);
+}
+
+::selection {
+    background: var(--color-selection);
+}
+
+/* Grid System */
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--grid-gutter));
+}
+
+.column {
+    padding: var(--grid-gutter);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: calc(var(--font-size-base) * 0.9);
+    }
+
+    .container {
+        padding: 0 calc(var(--spacing-unit) / 2);
+    }
+
+    .grid {
+        margin: calc(-1 * var(--grid-gutter) / 2);
+    }
+
+    .column {
+        padding: calc(var(--grid-gutter) / 2);
+    }
+}
+
+/* Transitions */
+.page {
+    transition: border-color var(--transition-duration) var(--transition-timing);
+}
+
+.highlighted {
+    transition: background-color var(--transition-duration) var(--transition-timing);
+}

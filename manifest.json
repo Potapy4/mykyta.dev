@@ -17,5 +17,17 @@
   "background_color": "white",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "white"
+  "theme_color": "white",
+  "description": "Mykyta Potapenko's personal website and resume",
+  "categories": ["portfolio", "resume", "personal"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "orientation": "any",
+  "shortcuts": [
+    {
+      "name": "View Resume",
+      "url": "/index.html",
+      "description": "View Mykyta's Resume"
+    }
+  ]
 }
